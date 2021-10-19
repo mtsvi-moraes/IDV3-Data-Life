@@ -126,7 +126,7 @@ You can check more details at: http://specwater.web.app
 * [Pedro Ivo](https://github.com/P-dro), IT Specialist
 
 <p>
-  <img src="https://contributors-img.web.app/image?repo=EduardoMoraesRitter/SpecWater" />
+  <img src="https://contributors-img.web.app/image?repo=mtsvi-moraes/IDV3---Data-Life" />
 </p>
 
 ## License
