@@ -100,6 +100,8 @@ For this project, two samples were collected for analysis, one from safe water a
 ### Model algorithms, Auto AI 
 We used a cognitive system applied in Watson Studio together with Watson ML to test different algorithms and compare the efficiency of the models, streamlining the analysis process between the collected samples, and in the future analyzing any changes or anomalies that will be immediately noticed in the rivers.:
 
+![AutoAI](/gifs/IBM_Watson_IA.gif)
+
 
 
 ### Web site 
