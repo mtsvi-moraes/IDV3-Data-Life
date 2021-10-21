@@ -4,12 +4,12 @@
 ## Conteúdo
 
 1. [INTRODUÇÃO](#INTRODUÇÃO)
-2. [MATERIAIS E METODOS](#MATERIAIS E METODOS)
-3. [FONTES DE DADOS](#FONTES DE DADOS)
-5. [ESTATISTICA DISCRITIVA](#ESTATISTICA DISCRITIVA)
-6. [PREPARAÇÃO DOS DADOS](#PREPARAÇÃO DOS DADOS)
-7. [TÉCNICAS DE MODELAGEM](TÉCNICAS DE MODELAGEM)
-8. [DESIGN DE TESTES](#DESIGN DE TESTES)
+2. [MATERIAIS E METODOS](#MATERIAIS-E-METODOS)
+3. [FONTES DE DADOS](#FONTES-DE-DADOS)
+5. [ESTATISTICA DISCRITIVA](#ESTATISTICA-DISCRITIVA)
+6. [PREPARAÇÃO DOS DADOS](#PREPARAÇÃO-DOS-DADOS)
+7. [TÉCNICAS DE MODELAGEM](TÉCNICAS-DE-MODELAGEM)
+8. [DESIGN DE TESTES](#DESIGN-DE-TESTES)
 
 
 
@@ -119,11 +119,11 @@ You can check more details at: http://specwater.web.app
 - [Watson IoT Cloud](https://www.ibm.com/cloud/internet-of-things)
 
 ## About us
-* [Eduardo Ritter](https://github.com/EduardoMoraesRitter), Senior Software Engineer
-* [Joana Ritter](https://github.com/JoanaRitter), UX/UI Designer
-* [Joel Pacheco](https://github.com/jpachecoaraujo), Chemist
+* [Erick Grabowski Crisóstomo](https://github.com/dudegrabow), Data Scientist
+* [Juliana Machado](https://github.com/dementshuk), Product Owner
+* [Gisela Petroni](https://github.com/G1s2l3), Data Scientist
 * [Matheus Moraes](https://github.com/mtsvi-moraes), Data Scientist
-* [Pedro Ivo](https://github.com/P-dro), IT Specialist
+* [Mauro Pereira](https://github.com/Karmelia69), Scrum Master
 
 <p>
   <img src="https://contributors-img.web.app/image?repo=mtsvi-moraes/IDV3---Data-Life" />
