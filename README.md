@@ -113,14 +113,14 @@ You can check more details at: http://specwater.web.app
 #### Consequently creating a complete monitoring system through which we can observe changes in the physical, chemical and biological characteristics of the observed water
 
 
-## Resources
+## BIBLIOGRAFIA
 
 - [IBM Cloud](https://www.ibm.com/cloud)
 - [Watson Studio](https://www.ibm.com/cloud/watson-studio)
 - [Watson Machine Learning](https://www.ibm.com/br-pt/cloud/machine-learning)
 - [Watson IoT Cloud](https://www.ibm.com/cloud/internet-of-things)
 
-## About us
+## SOBRE NÓS
 * [Erick Grabowski Crisóstomo](https://github.com/dudegrabow), Data Scientist
 * [Juliana Machado](https://github.com/dementshuk), Product Owner
 * [Gisela Petroni](https://github.com/G1s2l3), Data Scientist
