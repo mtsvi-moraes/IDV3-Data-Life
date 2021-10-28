@@ -49,25 +49,24 @@ In addition, the system will issue an alert for responsible authorities to take 
 
 ## PREPARAÇÃO DOS DADOS
 
-* In the alpha stage of this project, a spectrometry study was made in order to understand the process of chemical analysis fluids that come into contact with water. As a result, we developed a prototype in Arduino to validate the hypothesis, even not knowing for certain if whether this solution would work or not.
-* After the validation of the hypothesis we begined the Beta stage where, through the collected data, we elaborated a statistical analysis  to verify if the water in question would be contaminated or not. With the success we had, we created a MVP (minimum viable product) in order to be applied in the real world.
-* In the future we intend to estabilish Watson IoT Cloud to transfer the collected data. In order to accomplish this, we're going to collect more samples from different rivers and lakes, as well as we intend to apply and test a new Machine Learning anomaly detection model. These data will be made available to the public who will also be able to detect and share their results with the community
+* Dos dados recebidos do Butantã, a partir de um arquivo csv com aproximadamente 1.3 milhões de dados descritivos e mais de 100 colunas, foram identificadas colunas potenciais, que incluíam sintomas e condições sociais relativas a pacientes com covid-19 com o objetivo de identificar potenciais casos da doença. 
+* A partir de conversas com o cliente, o total de 100 colunas foram resumidas para um total de 51 colunas que mais representavam a doença, bem como representava as colunas que eram utilizadas, uma vez que outrora muitas colunas foram descartadas a longo do tempo, ou então não foram respondidas pelo paciente.
 
 
 
 ## TÉCNICAS DE MODELAGEM
 
-1. Initial phase: Water collection through IoT where it can be placed in several rivers
-1. Data transmission through MQTT protocol to Watson IoT platform;
-1. The data management proccess for analysis and orquestration of steps;
-1. Sent to Watson Studio where the data is treated and sent to Watson ML Engine;
-1. The machine learning model is implemented and it is responsible to classify the quality of water;
-1. After the data is classified, it is sent to a database;
-1. The API consumes the data and makes it available for comsumption;
-1. The website gathers the information and puts it on a map;
-1. The local population can access the website and check the quality of the consumed water in real time
+1. Fase inicial: A partir da biblioteca Pandas do Python, foram utilizados o método drop para remover todas as colunas que foram identificadas como não potenciais
+2. Após a deleção de tais colunas, através do método isnull do pandas foram identificadas as colunas que não possuíam valores NaN (Valores nulos)
+3. Após a identificação dos valores NaN, foram pensadas alternativas para o preenchimento desses valores. Em colunas que possuíam a grande maioria das linhas com valores NaN, elas foram removidas, uma vez que em tal condição, onde por exemplo, 99% dos valores são nulos, não é possível fazer uma estimação desses valores.
+4. Após a identifcação de tais valores, em colunas onde era possível, através da biblioteca Scikit-learn, foi utilizado o método IterativeImputer para estimar valores nulos.
+5. Concluindo esse ponto, foram dividos os treinos entre treino e teste e escolhido o modelo de predição, que incluem Random Forest, Logit e Softmax
+6. Após isso, para melhorar o desempenho do nosso modelo, foi utilizado o modulo GridSearchCV da biblioteca Scikit-learn para otimização de hiperparametros do modelo de Machine Learning
+7. Após a otimização dos hiperparâmetros, mais uma vez foi rodado o modelo com os melhores parametros e uma melhor otimização
+8. Para concluir, foram mostrado métodos de avaliação de modelo como Matriz de confusão, curva ROC, e classification report
+9. Para mais uma vez validar nossos estudos, foi utilizada a plataforma Watson da IBM com o AutoAI
 
-
+![AutoAI](/gifs/autoai.gif)
 
 
 ## DESIGN DE TESTES
@@ -100,7 +99,6 @@ For this project, two samples were collected for analysis, one from safe water a
 ### Model algorithms, Auto AI 
 We used a cognitive system applied in Watson Studio together with Watson ML to test different algorithms and compare the efficiency of the models, streamlining the analysis process between the collected samples, and in the future analyzing any changes or anomalies that will be immediately noticed in the rivers.:
 
-![AutoAI](/gifs/autoai.gif)
 
 
 
@@ -134,11 +132,6 @@ You can check more details at: http://specwater.web.app
 </p>
 
 ## License
-
-This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
-[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Community](https://img.shields.io/badge/Join-Community-blue.svg)](https://developer.ibm.com/callforcode/solutions/projects/get-started/)
-
-
 
 This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
 
