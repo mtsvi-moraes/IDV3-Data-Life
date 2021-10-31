@@ -52,7 +52,169 @@ In addition, the system will issue an alert for responsible authorities to take 
 * Dos dados recebidos do Butantã, a partir de um arquivo csv com aproximadamente 1.3 milhões de dados descritivos e mais de 100 colunas, foram identificadas colunas potenciais, que incluíam sintomas e condições sociais relativas a pacientes com covid-19 com o objetivo de identificar potenciais casos da doença. 
 * A partir de conversas com o cliente, o total de 100 colunas foram resumidas para um total de 51 colunas que mais representavam a doença, bem como representava as colunas que eram utilizadas, uma vez que outrora muitas colunas foram descartadas a longo do tempo, ou então não foram respondidas pelo paciente.
 
+* SELEÇÃO DE VARIÁVEIS
 
+  A base de dados utilizada neste estudo é categorizada como dados em painel com periodicidade diária contemplando observações não-únicas, com disponibilização de cento e uma variáveis.
+Dada a disponibilidade, um melhor controle e limpeza da base foi necessária para obter uma melhor escolha ótima do modelo utilizados, com a divisão em cinco categorias, sendo elas:
+
+Identificação da observação: Sexo, localização e idade
+Socioambiental: Trabalho, residência e contato
+Condição de saúde: Doenças anteriores e estado de saúde
+Sintomas: Sintomas apresentados na data de coleta do exame
+Resultado: Resultado do teste de Covid-19.
+
+Para a seleção preliminar de variáveis, fora decidido seis etapas para a determinação da exclusão ou não de uma variável, sendo os itens a seguir:
+
+Entrevista preliminar com epidemiologistas
+Informações faltantes
+Variáveis com informações duplicadas ou já incluídas
+Amplitude das informações
+Fora do escopo do projeto ou não aplicável
+Observações fora do estado de São Paulo
+
+A entrevista ocorrida no dia 31/08/2021 com as epidemiologistas ligadas ao Instituto Butantan foi deveras esclarecedora acerca de diversas variáveis da base de dados disponibilizada, assim permitindo um melhor entendimento e a decisão de permanências de cinquenta variáveis, sendo estas escolhidas pelo baixo índice de informação faltante, a congregação de colunas com informações duplicadas e a alta relevância acerca do entendimento da doença através da entrevista realizada.
+A decisão de não incluir observações que ocorreram fora do estado de São Paulo foi tomada por conta do alto número de informações faltantes de testes realizados fora do mesmo e também por se tratar de um estudo de caso epidemiológico, onde fatores regionais distintos podem ocasionar em uma falsa interpretação do modelo.
+
+Para a decisão de variável de controle, consideramos o teste igM (teste da Imunoglobulina M), pois ele representa uma infecção recente daqueles afetados da COVID-19, assim, dentro do escopo sugerido, é a variável que mais interessante se torna para a determinação se o indivíduo está ou não infectado, conforme Prazuck (2020), em testes rápidos pertencentes às empresas COVID-PRESTO® e COVID-DUO®  a presença do anticorpo igM é prevalecente até o décimo e quinto dia de infecção.
+
+Variáveis escolhidas:
+
+1. Identificação (5)
+  - municipio
+  - id_patient
+  - sex
+  - date_exam
+  - age_category
+
+2. Socioambiental (11)
+  - department
+  - test_worker
+  - healthcare_professional
+  - home_rooms
+  - has_running_water
+  - public_transport
+  - has_traveled
+  - presential_work
+  - has_contact_hospital
+  - has_contact_confirmed
+  - has_contact_suspicious
+
+3. Condição (18)
+  - puerperal
+  - hematological_disease
+  - neurologicas_disease
+  - tumor
+  - autoimmune_diseases
+  - other_comorbidity
+  - pregnancy
+  - disability
+  - obesity
+  - has_vaccine_flu
+  - kidneys_disease
+  - liver_disease
+  - asthma
+  - smoker
+  - diabetes
+  - lung_disease
+  - heart_disease
+  - high_pressure
+
+4. Sintomas (15)
+  - conjunctivitis
+  - asymptomatic
+  - abdomen_pain
+  - chills
+  - diarrhea
+  - missing_smell
+  - missing_tasy
+  - nausea
+  - body_pain
+  - cough
+  - fever
+  - hard_breathe
+  - head_pain
+  - running_nose
+  - throat_pain
+  
+5. Resultado (1)
+  - result_igm
+
+Em uma exploração aos dados descartados com base nos parâmetros já esclarecidos anteriormente, apesar de terem sido descartados por não se adequarem ao modelo aqui proposto, podem apresentar uma alta relevância em estudos futuros a fundo.
+
+Variáveis descartadas:
+
+1. Condição (15)
+  - Alto números de valores nulos
+    - chest_tomography
+    - pregnancy_trimester
+    - x_ray_result
+    - chronic_disease
+    - had_dengue_confirmed
+    - high_colesterol
+  - Amplitude de informações
+    - x_ray
+    - had_baby
+    - interned
+    - previous_disease_assessment_symptomatic
+    - had_dengue
+  - Informações duplicadas ou já incluída
+    - has_comobidity
+    - comorbities_number
+  - Fora do escopo da proposta
+    - blood_type
+2. Sintomas (4)
+  - Alto números de valores nulos
+    - weakness
+    - fatigue
+  - Fora do escopo da proposta
+    - purple_marks
+    - red_marks
+3. Identificação (13)
+  - Alto números de valores nulos
+    - purpose_of_exam
+    - latitude
+    - longitude
+  - Informações duplicadas ou já incluídas
+    - pandemic_week_year
+    - date_hour_exam
+    - last_exam_by_document
+    - insert_date
+    - pandemic_week
+    - year
+  - Fora do escopo da proposta
+    - city
+    - last_exam_by_group
+    - project
+    - state
+4. Resultado (6)
+  - Alto números de valores nulos
+    - previous_pcr_result
+    - previous_quick_test_result
+  - Amplitude
+    - previous_covid_exam
+  - Informações duplicadas ou já incluídas
+    - soro_reagent_desc
+    - soro_reagent
+    - Fora do escopo do projeto
+    - result_igg
+    
+5. Socioambiental (13)
+  - Alto números de valores nulos
+    - home_people
+    - risk_occupation
+    - work_people
+    - butantan
+    - family_income
+    - formal_job
+  - Amplitude
+    - live_with_another_people
+    - work_masks
+    - work_windows
+    - wear_mask
+    - work_airy_environment
+  - Fora do escopo da proposta
+    - work_people_bin
+    - work_city
 
 ## TÉCNICAS DE MODELAGEM
 
