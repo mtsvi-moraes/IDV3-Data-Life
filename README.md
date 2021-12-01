@@ -74,32 +74,14 @@ Para a seleção preliminar de variáveis, fora decidido seis etapas para a dete
 
 A entrevista ocorrida no dia 31/08/2021 com as epidemiologistas Elaine Cristina Marqueze e Claudia Renata dos Santos Barros ligadas ao Instituto Butantan foi deveras esclarecedora acerca de diversas variáveis da base de dados disponibilizada, assim permitindo um melhor entendimento e a decisão de permanências de cinquenta variáveis, sendo estas escolhidas pelo baixo índice de informação faltante, a congregação de colunas com informações duplicadas e a alta relevância acerca do entendimento da doença através da entrevista realizada.
 A decisão de não incluir observações que ocorreram fora do estado de São Paulo foi tomada por conta do alto número de informações faltantes de testes realizados fora do mesmo e também por se tratar de um estudo de caso epidemiológico, onde fatores regionais distintos podem ocasionar em uma falsa interpretação do modelo.
-
 Para a decisão de variável de controle, consideramos o teste igM (teste da Imunoglobulina M), pois ele representa uma infecção recente daqueles afetados da COVID-19, assim, dentro do escopo sugerido, é a variável que mais interessante se torna para a determinação se o indivíduo está ou não infectado, conforme Prazuck (2020), em testes rápidos pertencentes às empresas COVID-PRESTO® e COVID-DUO®  a presença do anticorpo igM é prevalecente até o décimo e quinto dia de infecção.
 
 Variáveis escolhidas:
 
-1. Identificação (5)
-  - municipio
-  - id_patient
-  - sex
-  - date_exam
+1. Identificação (1)
   - age_category
 
-2. Socioambiental (11)
-  - department
-  - test_worker
-  - healthcare_professional
-  - home_rooms
-  - has_running_water
-  - public_transport
-  - has_traveled
-  - presential_work
-  - has_contact_hospital
-  - has_contact_confirmed
-  - has_contact_suspicious
-
-3. Condição (18)
+2. Condição (18)
   - puerperal
   - hematological_disease
   - neurologicas_disease
@@ -119,7 +101,7 @@ Variáveis escolhidas:
   - heart_disease
   - high_pressure
 
-4. Sintomas (15)
+3. Sintomas (15)
   - conjunctivitis
   - asymptomatic
   - abdomen_pain
@@ -162,6 +144,7 @@ Variáveis descartadas:
     - comorbities_number
   - Fora do escopo da proposta
     - blood_type
+   
 2. Sintomas (4)
   - Alto números de valores nulos
     - weakness
@@ -169,7 +152,7 @@ Variáveis descartadas:
   - Fora do escopo da proposta
     - purple_marks
     - red_marks
-3. Identificação (13)
+3. Identificação (16)
   - Alto números de valores nulos
     - purpose_of_exam
     - latitude
@@ -186,7 +169,10 @@ Variáveis descartadas:
     - last_exam_by_group
     - project
     - state
-4. Resultado (6)
+    - municipio
+    - id_patient
+    - date_exam
+4. Resultado (7)
   - Alto números de valores nulos
     - previous_pcr_result
     - previous_quick_test_result
@@ -198,7 +184,7 @@ Variáveis descartadas:
     - Fora do escopo do projeto
     - result_igg
     
-5. Socioambiental (13)
+5. Socioambiental (24)
   - Alto números de valores nulos
     - home_people
     - risk_occupation
@@ -215,6 +201,17 @@ Variáveis descartadas:
   - Fora do escopo da proposta
     - work_people_bin
     - work_city
+    - department
+    - test_worker
+    - healthcare_professional
+    - home_rooms
+    - has_running_water
+    - public_transport
+    - has_traveled
+    - presential_work
+    - has_contact_hospital
+    - has_contact_confirmed
+    - has_contact_suspicious    
 
 ## TÉCNICAS DE MODELAGEM
 
