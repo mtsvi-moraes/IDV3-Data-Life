@@ -72,7 +72,7 @@ Para a seleção preliminar de variáveis, fora decidido seis etapas para a dete
 - Fora do escopo do projeto ou não aplicável
 - Observações fora do estado de São Paulo
 
-A entrevista ocorrida no dia 31/08/2021 com as epidemiologistas Elaine Cristina Marqueze e Claudia Renata dos Santos Barros ligadas ao Instituto Butantan foi deveras esclarecedora acerca de diversas variáveis da base de dados disponibilizada, assim permitindo um melhor entendimento e a decisão de permanências de cinquenta variáveis, sendo estas escolhidas pelo baixo índice de informação faltante, a congregação de colunas com informações duplicadas e a alta relevância acerca do entendimento da doença através da entrevista realizada.
+  A entrevista ocorrida no dia 31/08/2021 com as epidemiologistas Elaine Cristina Marqueze e Claudia Renata dos Santos Barros ligadas ao Instituto Butantan foi deveras esclarecedora acerca de diversas variáveis da base de dados disponibilizada, assim permitindo um melhor entendimento e a decisão de permanências de cinquenta variáveis, sendo estas escolhidas pelo baixo índice de informação faltante, a congregação de colunas com informações duplicadas e a alta relevância acerca do entendimento da doença através da entrevista realizada.
 A decisão de não incluir observações que ocorreram fora do estado de São Paulo foi tomada por conta do alto número de informações faltantes de testes realizados fora do mesmo e também por se tratar de um estudo de caso epidemiológico, onde fatores regionais distintos podem ocasionar em uma falsa interpretação do modelo.
 Para a decisão de variável de controle, consideramos o teste igM (teste da Imunoglobulina M), pois ele representa uma infecção recente daqueles afetados da COVID-19, assim, dentro do escopo sugerido, é a variável que mais interessante se torna para a determinação se o indivíduo está ou não infectado, conforme Prazuck (2020), em testes rápidos pertencentes às empresas COVID-PRESTO® e COVID-DUO®  a presença do anticorpo igM é prevalecente até o décimo e quinto dia de infecção.
 
@@ -195,7 +195,7 @@ Variáveis descartadas:
   - Informações duplicadas ou já incluídas
     - soro_reagent_desc
     - soro_reagent
-    - Fora do escopo do projeto
+  - Fora do escopo do projeto
     - result_igg
     
 5. Socioambiental (15)
