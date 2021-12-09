@@ -117,6 +117,20 @@ Variáveis escolhidas:
   - head_pain
   - running_nose
   - throat_pain
+ 
+ 4. Social (11)
+  - department
+  - test_worker
+  - healthcare_professional
+  - home_rooms
+  - has_running_water
+  - public_transport
+  - has_traveled
+  - presential_work
+  - has_contact_hospital
+  - has_contact_confirmed
+  - has_contact_suspicious
+
   
 5. Resultado (1)
   - result_igm
@@ -184,7 +198,7 @@ Variáveis descartadas:
     - Fora do escopo do projeto
     - result_igg
     
-5. Socioambiental (24)
+5. Socioambiental (15)
   - Alto números de valores nulos
     - home_people
     - risk_occupation
@@ -201,18 +215,7 @@ Variáveis descartadas:
   - Fora do escopo da proposta
     - work_people_bin
     - work_city
-    - department
-    - test_worker
-    - healthcare_professional
-    - home_rooms
-    - has_running_water
-    - public_transport
-    - has_traveled
-    - presential_work
-    - has_contact_hospital
-    - has_contact_confirmed
-    - has_contact_suspicious    
-
+ 
 ## TÉCNICAS DE MODELAGEM
 
 1. Fase inicial: A partir da biblioteca Pandas do Python, foram utilizados o método drop para remover todas as colunas que foram identificadas como não potenciais
