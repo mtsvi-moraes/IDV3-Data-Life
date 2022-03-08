@@ -6,7 +6,7 @@
 1. [INTRODUÇÃO](#INTRODUÇÃO)
 2. [MATERIAIS E METODOS](#MATERIAIS-E-METODOS)
 3. [FONTES DE DADOS](#FONTES-DE-DADOS)
-5. [ESTATISTICA DISCRITIVA](#ESTATISTICA-DISCRITIVA)
+5. [ESTATISTICA DESCRITIVA](#ESTATISTICA-DISCRITIVA)
 6. [PREPARAÇÃO DOS DADOS](#PREPARAÇÃO-DOS-DADOS)
 7. [TÉCNICAS DE MODELAGEM](TÉCNICAS-DE-MODELAGEM)
 8. [DESIGN DE TESTES](#DESIGN-DE-TESTES)
@@ -17,40 +17,24 @@
 
 ## INTRODUÇÃO:
 
-<p>Over 1.8 billion people on Earth do not have access to adequate sanitation. Therefore, over 10 million people, with the majority being children, die every year due to the lack of safe drinking water. This is a major problem plaguing humanity, targeting the poorest populations, whose only source of drinking water are rivers that can become polluted unbeknownst to the people who rely on them.
-
-Today, while scientific advancements are made daily, analyzing water quality is not a simple task. Researchers must travel to the region and collect individual samples. After which, the samples must then be  transported to a qualified laboratory where testing can be performed. Each of these crucial steps increase the time and monetary value spent on the expedition making it more difficult to receive funding and consequently alert the population.
-Taking all of this into account, we developed SpecWater, a solution that aims to facilitate this process and improve access to safer water sources in all regions and in real time, for all humanity.
-
-SpecWater uses Artificial Intelligence that analyzes the spectrum of light within a water sample collected by an IoT (a small equipment installed in rivers and lakes). After the analysis, results will be made available on an easily accessible website. Expanded functions such as the ability to trigger an alert via SMS, will also be available. When a water quality alert is sent, it will allow the population to be able to check the quality of the community source and view whether it has been contaminated, or if it’s safe to consume. Instructions regarding a separate source of drinking water will be provided if the community source tests confirm contamination thus, avoiding infant mortality, the human immunodeficiency virus, which is often found in contaminated water and several other serious health and nutrition problems. The responsible authorities will also be immediately alerted to take action and provide further assistance to the local population.</p>
+<p>A pandemia que teve início em 2019 (COVID-19) causada pelo novo coronavírus SARS-CoV-2 trouxe a realidade do preparo de diversos setores na prevenção contra esse tipo de evento e continua sendo um desafio para os sistemas de saúde. O diagnóstico imediato e efetivo da doença é um fator chave para as decisões clínicas e para compreensão do processo de infecção, fornecendo embasamento para decisões quanto a políticas públicas, por exemplo.
+O teste mais utilizado para o COVID-19 utiliza transcrição reversa seguida de reação em cadeia da polimerase em tempo real (RT-PCR). No entanto, estes testes costumam ser mais caros e demorados. Além disso, a falta de disponibilidade no início da pandemia e atraso nos resultados resultou na opção por testes mais rápidos. Testes sorológicos, por sua vez, são baseados na comprovação da presença de anticorpos no sangue, e, apesar de apresentarem uma menor sensibilidade são de baixo custo, mais acessíveis e rápidos. Todas as metodologias apresentam características diferentes e geralmente o diagnóstico depende não somente do exame, mas do histórico clínico e probabilidade de risco. A falta de diagnóstico correto pode acarretar um tratamento médico equivocado e uma fragmentação da informação sobre o avanço da pandemia.
+O Instituto Butantan, uma instituição renomada em pesquisa e principal produtor de imunobiológicos do Brasil, em parceria com o governo do estado de São Paulo realizou diversas ações de testagem populacional para detecção do COVID-19, principalmente em populações em casos de vulnerabilidade utilizando testes sorológicos. Mediante as testagens foi realizado um inquérito epidemiológico para coletar informações sintomáticas, sociais, econômicas e condições de saúde dos indivíduos. Além do monitoramento da doença, o objetivo foi compreender o processo de infecção e fatores importantes de diagnóstico. 
+Apesar de diversos estudos, ainda é desconhecido fatores chaves da infecção e indicadores, mesmo quando tratamos sobre sintomas e a interação entre estes.  Os sintomas mais citados na literatura como indicadores de infecção por COVID-19 foram dor de cabeça, febre, tosse, diarreia, hiposmia e anosmia. O uso de modelos de previsão pode ser uma estratégia chave especialmente em um contexto de recursos limitados que se utiliza da combinação de fatores para estimar a probabilidade de um indivíduo estar infectado e vai ao encontro da demanda social para entendimento de doenças e riscos de propagação e evolução de possíveis futuros eventos. </p>
 
 
 ### MATERIAIS E METODOS
 
-According to a recent report made by the United Nations Children’s Emergency Fund (UNICEF) and the World Health Organization (WHO), one in three people worldwide does not have access to safe water. 
-In many countries, taps, wells and pipes which are the only option for drinking water are contaminated unbeknownst by the population, putting the health of the ones who drink it at risk and making many sick.
+Os recursos necessários para o desenvolvimento do projeto foi uma equipe totalmente dedicada ao projeto composta pelo product owner, scrum master e três desenvolvedores. Uma equipe parcialmente dedicada ao projeto composta por consultor funcional e um consultor técnico. Foram necessários equipamentos como notebooks, ambientes de desenvolvimento e repositórios.
 
 ### FONTES DE DADOS:
 
-Every person needs a sustainable supply of clean water: for drinking, washing, cooking and cleaning. It is a basic human right and there are still millions of people who do not have clean water.
-
-To date, governments, institutions and service providers around the world have not done enough to ensure that clean water reaches the poorest and most marginalized people.
-
-Although COVID-19 highlights the importance of hand hygiene in preventing the spread of disease, billions of people around the world, including hundreds of millions of school-age children, do not have access to soapy washbasins. People living in rural areas, urban slums, disaster prone areas and low-income countries are the most vulnerable and the most affected. In addition, children who do not have clean water have not only their health affected, but also their nutrition, education and learning skills, impacting many aspects of their lives.
-
-Given this, we have the sad realization that millions of people suffer annually, without water, sanitation and hygiene services.
-
-### ESTATISTICA DISCRITIVA:
-
-Once the Desk Research step is completed, we realize that the starting point is to create a solution that aims to facilitate the process of water analysis and make the quality in your region available to all humanity in real time, so that everyone can access the site whenever you want, alerts will also be issued when the water that supplies your region is contaminated, as well as instructions for another form of drinking water consumption, and allowing safe information to be shared.
-
-In addition, the system will issue an alert for responsible authorities to take appropriate action.
-
+A base de dados utilizada neste estudo é categorizada como dados em painel com periodicidade diária contemplando observações não-únicas, com disponibilização de cento e uma variáveis. Ela foi disponibilizada através do Instituto Butantan, e se provém dos inquéritos epidemiológicos coletados em todo o Brasil, mas com maior ênfase no estado de São Paulo.
 
 ## PREPARAÇÃO DOS DADOS
 
   Dos dados recebidos do Butantã, a partir de um arquivo csv com aproximadamente 1.3 milhões de dados descritivos e mais de 100 colunas, foram identificadas colunas potenciais, que incluíam sintomas e condições sociais relativas a pacientes com covid-19 com o objetivo de identificar potenciais casos da doença. 
-A partir de conversas com o cliente, o total de 100 colunas foram resumidas para um total de 51 colunas que mais representavam a doença, bem como representava as colunas que eram utilizadas, uma vez que outrora muitas colunas foram descartadas a longo do tempo, ou então não foram respondidas pelo paciente.
+A partir de conversas com o cliente, o total de 100 colunas foram resumidas para um total de 35 colunas que mais representavam a doença, bem como representava as colunas que eram utilizadas, uma vez que outrora muitas colunas foram descartadas a longo do tempo, ou então não foram respondidas pelo paciente.
 
 * SELEÇÃO DE VARIÁVEIS
 
@@ -72,14 +56,15 @@ Para a seleção preliminar de variáveis, fora decidido seis etapas para a dete
 - Fora do escopo do projeto ou não aplicável
 - Observações fora do estado de São Paulo
 
-  A entrevista ocorrida no dia 31/08/2021 com as epidemiologistas Elaine Cristina Marqueze e Claudia Renata dos Santos Barros ligadas ao Instituto Butantan foi deveras esclarecedora acerca de diversas variáveis da base de dados disponibilizada, assim permitindo um melhor entendimento e a decisão de permanências de cinquenta variáveis, sendo estas escolhidas pelo baixo índice de informação faltante, a congregação de colunas com informações duplicadas e a alta relevância acerca do entendimento da doença através da entrevista realizada.
+  A entrevista ocorrida no dia 31/08/2021 com as epidemiologistas Elaine Cristina Marqueze e Claudia Renata dos Santos Barros ligadas ao Instituto Butantan foi deveras esclarecedora acerca de diversas variáveis da base de dados disponibilizada, assim permitindo um melhor entendimento e a decisão de permanências de trinta e cinco variáveis, sendo estas escolhidas pelo baixo índice de informação faltante, a congregação de colunas com informações duplicadas e a alta relevância acerca do entendimento da doença através da entrevista realizada.
 A decisão de não incluir observações que ocorreram fora do estado de São Paulo foi tomada por conta do alto número de informações faltantes de testes realizados fora do mesmo e também por se tratar de um estudo de caso epidemiológico, onde fatores regionais distintos podem ocasionar em uma falsa interpretação do modelo.
 Para a decisão de variável de controle, consideramos o teste igM (teste da Imunoglobulina M), pois ele representa uma infecção recente daqueles afetados da COVID-19, assim, dentro do escopo sugerido, é a variável que mais interessante se torna para a determinação se o indivíduo está ou não infectado, conforme Prazuck (2020), em testes rápidos pertencentes às empresas COVID-PRESTO® e COVID-DUO®  a presença do anticorpo igM é prevalecente até o décimo e quinto dia de infecção.
 
 Variáveis escolhidas:
 
-1. Identificação (1)
+1. Identificação (2)
   - age_category
+  - sex
 
 2. Condição (18)
   - puerperal
@@ -117,163 +102,79 @@ Variáveis escolhidas:
   - head_pain
   - running_nose
   - throat_pain
- 
- 4. Social (11)
-  - department
-  - test_worker
-  - healthcare_professional
-  - home_rooms
-  - has_running_water
-  - public_transport
-  - has_traveled
-  - presential_work
-  - has_contact_hospital
-  - has_contact_confirmed
-  - has_contact_suspicious
-
-  
+   
 5. Resultado (1)
   - result_igm
 
-Em uma exploração aos dados descartados com base nos parâmetros já esclarecidos anteriormente, apesar de terem sido descartados por não se adequarem ao modelo aqui proposto, podem apresentar uma alta relevância em estudos futuros a fundo.
+Em relação aos dados descartados com base nos parâmetros já esclarecidos anteriormente, apesar de terem sido descartados por não se adequarem ao modelo aqui proposto, podem apresentar uma alta relevância em estudos futuros a fundo.
 
-Variáveis descartadas:
+Com o alto número de valores faltantes entre todos os cinco data sets, a solução para tornar esta base de dados aplicável para uma solução utilizando-se ferramentas de machine learning foi a imputação múltipla através da linguagem R, segundo Nunes et al (2010) uma vantagem da imputação múltipla em relação à imputação única é o fato de a imputação múltipla levar em conta a variabilidade entre imputações e, no caso do método BLR, por ter o componente Bayesiano embutido no procedimento, restringir a subestimação da variabilidade amostral, já que a cada vez (e são m vezes) que é ajustada a regressão da IM, um valor diferente é gerado. Segundo F. E. Harrel Jr. (2001), quando há mais de 15% de dados faltantes, na maior parte dos modelos é indicada a imputação múltipla. Portanto, como neste trabalho havia uma média de 20% ~ 60% de dados faltantes para algumas categorias dos data sets, justifica-se a aplicação da imputação múltipla.
 
-1. Condição (15)
-  - Alto números de valores nulos
-    - chest_tomography
-    - pregnancy_trimester
-    - x_ray_result
-    - chronic_disease
-    - had_dengue_confirmed
-    - high_colesterol
-  - Amplitude de informações
-    - x_ray
-    - had_baby
-    - interned
-    - previous_disease_assessment_symptomatic
-    - had_dengue
-  - Informações duplicadas ou já incluída
-    - has_comobidity
-    - comorbities_number
-  - Fora do escopo da proposta
-    - blood_type
-   
-2. Sintomas (4)
-  - Alto números de valores nulos
-    - weakness
-    - fatigue
-  - Fora do escopo da proposta
-    - purple_marks
-    - red_marks
-3. Identificação (16)
-  - Alto números de valores nulos
-    - purpose_of_exam
-    - latitude
-    - longitude
-  - Informações duplicadas ou já incluídas
-    - pandemic_week_year
-    - date_hour_exam
-    - last_exam_by_document
-    - insert_date
-    - pandemic_week
-    - year
-  - Fora do escopo da proposta
-    - city
-    - last_exam_by_group
-    - project
-    - state
-    - municipio
-    - id_patient
-    - date_exam
-4. Resultado (7)
-  - Alto números de valores nulos
-    - previous_pcr_result
-    - previous_quick_test_result
-  - Amplitude
-    - previous_covid_exam
-  - Informações duplicadas ou já incluídas
-    - soro_reagent_desc
-    - soro_reagent
-  - Fora do escopo do projeto
-    - result_igg
-    
-5. Socioambiental (15)
-  - Alto números de valores nulos
-    - home_people
-    - risk_occupation
-    - work_people
-    - butantan
-    - family_income
-    - formal_job
-  - Amplitude
-    - live_with_another_people
-    - work_masks
-    - work_windows
-    - wear_mask
-    - work_airy_environment
-  - Fora do escopo da proposta
-    - work_people_bin
-    - work_city
- 
+A categoria da base de treino do modelo ou amplamente chamado como features também é transformado utilizando-se uma técnica de StandardScaler, na pacote da linguagem do python fornecido pela biblioteca SKlearn, segundo a informação da biblioteca, é necessário o uso desta transformação pois a uniformização do data set é um requerimento comum para diversos modelos de machine learning, estes modelos podem performar de maneira esdrúxula se as features não parecerem nem mais nem menos de uma uniformização de distribuição normal.
+
+## ESTATATÍCA DESCRITIVA
+Através de uma análise feita na linguagem R, podemos visualizar alguns insights sobre o projeto.
+
+-![Coleta](/gifs/coletadedados.png)
+
+-![Positivospormes](/gifs/posipormes.png)
+
+Com a visualização das imagens acima, podemos notar uma diferença nos últimos meses entre a coleta e os positivos, e também nos meses após o pico de positivos, onde a coleta se manteu constante mas o número de positivos cai abruptamente.
+
+Apesar de uma constante presença de assintomáticos tanto no quadro geral como nos casos positivos há uma queda quando olhamos para o último caso. Os sintomas parecem apresentar constância durante todo o período, exceto nas extremidades dos períodos de teste. 
+Nos primeiros meses o sintoma mais aparente era dor de cabeça (05-09/2020), seguido depois por dor no corpo (10/2020 – 02/2021) e por último tosse (03-08/2021).
+
+-![SintomaGeral](/gifs/sintomasgeral.png)
+
+-![SintomaPosi](/gifs/sintomaspositivos.png)
+
+-![SintomaNega](/gifs/sintomasnegativos.png)
+
+A frequência de casos positivos varia de 11 a 3% em cidades com mais de 10.000 testes realizados, totalizando 33 municípios dos 241 existentes.
+
+-![Municipio](/gifs/municipio.png)
+
 ## TÉCNICAS DE MODELAGEM
 
-1. Fase inicial: A partir da biblioteca Pandas do Python, foram utilizados o método drop para remover todas as colunas que foram identificadas como não potenciais
-2. Após a deleção de tais colunas, através do método isnull do pandas foram identificadas as colunas que não possuíam valores NaN (Valores nulos)
-3. Após a identificação dos valores NaN, foram pensadas alternativas para o preenchimento desses valores. Em colunas que possuíam a grande maioria das linhas com valores NaN, elas foram removidas, uma vez que em tal condição, onde por exemplo, 99% dos valores são nulos, não é possível fazer uma estimação desses valores.
-4. Após a identifcação de tais valores, em colunas onde era possível, através da biblioteca Scikit-learn, foi utilizado o método IterativeImputer para estimar valores nulos.
-5. Concluindo esse ponto, foram dividos os treinos entre treino e teste e escolhido o modelo de predição, que incluem Random Forest, Logit e Softmax
-6. Após isso, para melhorar o desempenho do nosso modelo, foi utilizado o modulo GridSearchCV da biblioteca Scikit-learn para otimização de hiperparametros do modelo de Machine Learning
-7. Após a otimização dos hiperparâmetros, mais uma vez foi rodado o modelo com os melhores parametros e uma melhor otimização
-8. Para concluir, foram mostrado métodos de avaliação de modelo como Matriz de confusão, curva ROC, e classification report
-9. Para mais uma vez validar nossos estudos, foi utilizada a plataforma Watson da IBM com o AutoAI
+O uso de modelos de machine learning na medicina não é novidade na área de patologias, para a predição do nosso modelo é se faz necessário o uso de modelos classificatórios, conforme ESTEVES et al., (2009) o machine learning (ML)  é uma  subárea  da Inteligência Artificial (IA), que estuda o desenvolvimento  de  métodos capazes de extrair informações e conhecimento a partir de amostras de dados. São utilizados uma vasta gama de algoritmos diferentes com a capacidade de classificar conjuntos de elementos. Por classificação entende-se o processo de atribuir a um determinado  dado, o  rótulo  da  classe  à qual ele pertence. Neste  sentido as técnicas de ML são empregadas na  indução,  a  partir  de um conjunto de exemplos de um classificador, que deve ser capaz  de  prever  a classe  de novos  dados  quaisquer  do  domínio em que ele foi treinado   
 
-![AutoAI](/gifs/autoai.gif)
+Nesta pesquisa, utilizou-se três técnicas de machine learning, o random forest, um método classificatório que consiste na criação de árvores de decisão com baixa correlação e previsão por voto, a regressão logística, algoritmo baseado entre a relação entre a variável dependente categórica com as variáveis independentes, estimando as probabilidades usando uma função logística e árvore de decisão, um método onde existe uma função que recebe um vetor de valores (de atributos) como entrada e retorna uma decisão (de saída).
+Uns dos grandes desafios se direcionou ao tratamentos de balanceamento da base de dados, neste trabalho, optou-se em observar o resultados dos três modelos de machine learning em quatro métodos de desbalanceamentos, sendo eles, oversample, smote (Synthetic Minority Over-sampling Technique), undersampler e near miss, vale lembrar que smote e near miss também são classificados como oversampler e undersampler, respectivamente.
 
+Dubey et., al (2014) comenta que no oversampler, todos os pontos de dados dos conjuntos de treinamento majoritários e minoritários são usados. Além disso, as instâncias são escolhidas aleatoriamente, com reposição do conjunto de treinamento minoritário até que o equilíbrio desejado seja alcançado. Adicionar as mesmas amostras minoritárias pode resultar em overfitting, reduzindo assim a capacidade de generalização do classificador, no balanceamento SMOTE, o classificador irá considerar as mesmas informações já citadas, mas com o adicional de dados minoritários sintéticos. No caso do undersampler, o autor comenta que todos os pontos de dados de treinamento da classe minoritária são usados. As instâncias são removidas aleatoriamente do conjunto de treinamento majoritário até que o equilíbrio desejado seja alcançado. Uma desvantagem dessa abordagem é que algumas informações úteis podem ser perdidas da classe majoritária devido à subamostragem.
 
-## DESIGN DE TESTES
+## DESIGN DE TESTES E RESULTADOS
 
-### Spectrophotometry research:
-It is a method used to measure how much a chemical substance absorbs light by measuring the intensity of when a beam of light passes through a sample, making it possible to measure the quantity of a known chemical substance
+Para a definição de nossos parâmetros para uma melhor estimação, definimos que o melhor resultado gerado seria aqueles que levam em consideração o balanceamento dos dados, o peso deles e o threshold. Para a percepção de resultados, levamos em consideração os seguintes itens:
 
+- Curva ROC
+- Matriz de Confusão
+- Sensibilidade
+- Especificidade
+- Acurácia
 
+-![Resultados](/gifs/rf.png)
 
-### Arduino prototype:
-We developed a spectrophotometry prototype in Arduino capable of analyzing water samples, which when in the future installed in rivers, streams, wells, springs and treatment plants will collect the water data and process them through cloud.
+Na tabela acima vemos três critérios diferentes para a classificação de performance do modelo Santos et al (2019) define que a sensibilidade é a proporção de verdadeiros positivos (VP) entre todos os indivíduos cuja resposta de interesse foi observada, e a especificidade refere-se à proporção de verdadeiros negativos (VN) entre aqueles com resposta de interesse ausente, a acurácia indica uma performance geral do modelo.
+Consideramos que modelo de classificação que mais se adequa aos nossos parâmetros de qualidade é a que utiliza o método de Regressão Logística, pois explorando os resultados de Sensibilidade, Especificação e Acurácia, a especificação e acurácia por possuírem valores muito próximos nos três modelos, a regressão logística se destacou no item de sensibilidade, isso quer dizer, que dentro do modelo, o número de acertos na previsão de pessoas que possuíam dentro do banco de dados o reagente positivo para igM foram de quarenta e quatro por cento, seguido posteriormente e com resultado bem próximo pelo modelo de Random Forest, com um resultado de quarenta e dois por cento, o modelo de Árvore de Decisão equiparados aos dois modelos citados anteriormente apresentou um pior resultado, de trinta e oito por cento.
+Também no nosso critério de escolha, observamos os resultados obtidos através da geração da Curva ROC, que irá nos dizer um comparativo de sensibilidade do desempenho dos modelos que melhor performaram, obtendo o seguinte resultado.
 
+-![ROC](/gifs/roc2.png)
 
+Na imagem acima, com a observação apenas da curva, não é conclusivo afirmar qual a melhor performance obtida, porém, ao analisarmos a área que elas possuem, veremos que o resultado da regressão logística possui uma leve vantagem comparado aos demais modelos, cravando assim nosso critério de escolha.
+Na tabela a seguir, observamos a influência das variáveis respostas no modelo LOGIT:
 
-### Collection in the river:
-The Tietê river, born in Salesópolis, in the Serra do Mar, crosses the state of São Paulo, bathing 62 municipalities. The river is at the top of the ranking of the most polluted rivers in Brazil, as it receives domestic and industrial sewage in the stretch of the capital where less than half of this sewage is treated. The analyzed sample was collected in the western region of the city, after the river had crossed the entire state capital on the border with the municipality of Osasco.
+-![LOGIT](/gifs/filogit.png)
 
+-![LOGIT](/gifs/fi2.png)
 
+Apesar de uma pior performance pouco perceptiva no critério de sensibilidade, o modelo performado no método Random Forest também apresentou resultados satisfatórios na importância das variáveis no modelo, podemos observar na tabela e na imagem a seguir respectivamente:
 
-### Creation of an Arduino collector for spectrophotometry testing:
-Taken from the point where the water runs calmly with a strong sewage odor using a plastic container and transferred to the test body applying the method of analysis according to the variation of the light beam through the substance without decanting of organic material.
+-![LOGIT](/gifs/firf.png)
 
+-![LOGIT](/gifs/fi1.png)
 
-
-### Data analysis
-For this project, two samples were collected for analysis, one from safe water and the other from the most polluted river in Brazil, the Tietê river, located in the capital of São Paulo. Thus, we carried out a comparison between different samples and proved the efficiency of the chosen method, proving that the project is functionally applicable:
-
-
-
-### Model algorithms, Auto AI 
-We used a cognitive system applied in Watson Studio together with Watson ML to test different algorithms and compare the efficiency of the models, streamlining the analysis process between the collected samples, and in the future analyzing any changes or anomalies that will be immediately noticed in the rivers.:
-
-
-
-
-### Web site 
-The SpecWater website is available for desktops and mobile devices. It is possible to search the water quality by filtering the country or province where the user is located, as well as view the map where the IoT device was installed and the water sample was collected, and through a check mark, view the quality of the water and in the future receive instructions on how to treat it for consumption, until the responsible authorities take further actions.
-
-You can check more details at: http://specwater.web.app
-
-
-
-
-#### Consequently creating a complete monitoring system through which we can observe changes in the physical, chemical and biological characteristics of the observed water
-
+Com resultados divergentes entre algumas posições de importância de variável, podemos observar o destaque de uma em especial, a categoria de idade, esta variável nos mostra como a idade da população observada está sendo determinante para a predição dos diferentes métodos empregados, no modelo LOGIT apresentando uma resposta de 21,75 e no modelo de Random Forest com uma resposta de 44,06%. A variável sex também se mostrou relevante, com os dois modelos apresentando um viés de gênero. Com um comparativo entre os dois métodos empregados, apesar de serem bastantes heterogêneos e divergentes, abrem oportunidades para uma discussão mais profunda sobre o assunto.
 
 ## BIBLIOGRAFIA
 
@@ -281,6 +182,17 @@ You can check more details at: http://specwater.web.app
 - [Watson Studio](https://www.ibm.com/cloud/watson-studio)
 - [Watson Machine Learning](https://www.ibm.com/br-pt/cloud/machine-learning)
 - [Watson IoT Cloud](https://www.ibm.com/cloud/internet-of-things)
+- NUNES, N. L.; KLUCK. M. M.; FACHEL. G. J;  Comparação de métodos de imputação única e múltipla usando como exemplo um modelo de risco para mortalidade cirúrgica. In: Rev. bras. epidemiologia, 2010. Disponível em: < https://www.scielo.br/j/rbepid/a/ZRCFBZDGfKC3RqTkRpbXWsF/?lang=pt >
+- F.E. HARREL JR. REGRESSION MODELING STRATEGIES In: BIOS 330. 2014. Disponível em < https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.468.8845&rep=rep1&type=pdf >
+https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html
+- SANTOS, G. H; NASCIMENTO, F. C; IZBICKI, R; DUARTE, O. Y; FILHO, C. A. Machine learning para análises preditivas em saúde: exemplo de aplicação para predizer óbito em idosos de São Paulo, Brasil In Cad. Saúde Pública 35 (7)  2019. Disponível em < https://www.scielo.br/j/csp/a/jyhKL6G4dZhcbchMD6bcS8s/ >
+- ESTEVES,  S.  R.;LORENA,  A.  C.;  NASCIMENTO, M.  Z.  Aplicação  de  técnicas  Aprendizado  de Máquina     na     Classificação     de     Imagens Mamográficas. In:  SIMPÓSIO  DE  INICIAÇÃO CIENTÍFICA  DA  UNIVERSIDADE  FEDERAL  DO ABC,2. 2009. Disponível em: <http://ic.ufabc.edu.br/II_SIC_UFABC/resumos/paper_5_150.pdf>
+- DUBEY. R. ; ZHOU. J. ; WANG. Y. ; THOMPSON. M. P. ; YE. J. ANALYSIS OF SAMPLING TECHNIQUES FOR IMBALANCED DATA: AN N=648 ADNI STUDY. In: Neuroimage. 220–241 (2014). Disponível em <   .https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946903/ >
+- PRAZUCK. T. ; COLIN. M. ;GIACHE. S. al. ; Evaluation of performance of two SARS-CoV-2 Rapid IgM-IgG combined antibody tests on capillary whole blood samples from the fingertip. In PLoS One (9):e0237694 (2020 September) Disponível em < https://pubmed.ncbi.nlm.nih.gov/32941461/ >
+- ZOABI. Y.; DERI-ROZOV. S. ; SHOROM. N. ; Machine learning-based prediction of COVID-19 diagnosis based on symptoms in NATURE (04 January 2021). Disponível em < https://www.nature.com/articles/s41746-020-00372-6 >
+- LARSEN. J. ; MARTIN. M.; Modeling the Onset of Symptoms of COVID-19 in Front. Public Health (2020). Disponível em < https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7438535/ >
+- Tracking SARS-CoV-2 variants in WHO. Disponível em < https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/ >
+- WYNANTES. L. ; CALSTER. B. ; BOONTEN. M. Prediction models for diagnosis and prognosis of covid-19 infection: systematic review and critical appraisal. In BMJ 2020;369:m1328. Disponível em < https://www.bmj.com/content/bmj/suppl/2020/04/07/bmj.m1328.DC1/bmj.m1328.pdf >
 
 ## SOBRE NÓS
 * [Erick Grabowski Crisóstomo](https://github.com/dudegrabow), Data Scientist
@@ -295,5 +207,5 @@ You can check more details at: http://specwater.web.app
 
 ## License
 
-This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under Instituto Butantans.
 
