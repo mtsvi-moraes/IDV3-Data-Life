@@ -132,11 +132,11 @@ A categoria da base de treino do modelo ou amplamente chamado como features tamb
 
 Para a definição de nossos parâmetros para uma melhor estimação, definimos que o melhor resultado gerado seria aqueles que levam em consideração o balanceamento dos dados, o peso deles e o threshold. Para a percepção de resultados, levamos em consideração os seguintes itens:
 
--Curva ROC
--Matriz de Confusão
--Sensibilidade
--Especificidade
--Acurácia
+- Curva ROC
+- Matriz de Confusão
+- Sensibilidade
+- Especificidade
+- Acurácia
 
 -![Resultados](/gifs/rf.png)
 
