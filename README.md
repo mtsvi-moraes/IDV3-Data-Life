@@ -113,7 +113,7 @@ Com o alto número de valores faltantes entre todos os cinco data sets, a soluç
 A categoria da base de treino do modelo ou amplamente chamado como features também é transformado utilizando-se uma técnica de StandardScaler, na pacote da linguagem do python fornecido pela biblioteca SKlearn, segundo a informação da biblioteca, é necessário o uso desta transformação pois a uniformização do data set é um requerimento comum para diversos modelos de machine learning, estes modelos podem performar de maneira esdrúxula se as features não parecerem nem mais nem menos de uma uniformização de distribuição normal.
 
 ## ESTATATÍCA DESCRITIVA
-Através de uma análise feita no R através do pacote, podemos visualizar alguns insights sobre o projeto.
+Através de uma análise feita na linguagem R, podemos visualizar alguns insights sobre o projeto.
 
 -![Coleta](/gifs/coletadedados.png)
 
@@ -189,6 +189,10 @@ https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Standard
 - ESTEVES,  S.  R.;LORENA,  A.  C.;  NASCIMENTO, M.  Z.  Aplicação  de  técnicas  Aprendizado  de Máquina     na     Classificação     de     Imagens Mamográficas. In:  SIMPÓSIO  DE  INICIAÇÃO CIENTÍFICA  DA  UNIVERSIDADE  FEDERAL  DO ABC,2. 2009. Disponível em: <http://ic.ufabc.edu.br/II_SIC_UFABC/resumos/paper_5_150.pdf>
 - DUBEY. R. ; ZHOU. J. ; WANG. Y. ; THOMPSON. M. P. ; YE. J. ANALYSIS OF SAMPLING TECHNIQUES FOR IMBALANCED DATA: AN N=648 ADNI STUDY. In: Neuroimage. 220–241 (2014). Disponível em <   .https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946903/ >
 - PRAZUCK. T. ; COLIN. M. ;GIACHE. S. al. ; Evaluation of performance of two SARS-CoV-2 Rapid IgM-IgG combined antibody tests on capillary whole blood samples from the fingertip. In PLoS One (9):e0237694 (2020 September) Disponível em < https://pubmed.ncbi.nlm.nih.gov/32941461/ >
+- ZOABI. Y.; DERI-ROZOV. S. ; SHOROM. N. ; Machine learning-based prediction of COVID-19 diagnosis based on symptoms in NATURE (04 January 2021). Disponível em < https://www.nature.com/articles/s41746-020-00372-6 >
+- LARSEN. J. ; MARTIN. M.; Modeling the Onset of Symptoms of COVID-19 in Front. Public Health (2020). Disponível em < https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7438535/ >
+- Tracking SARS-CoV-2 variants in WHO. Disponível em < https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/ >
+- WYNANTES. L. ; CALSTER. B. ; BOONTEN. M. Prediction models for diagnosis and prognosis of covid-19 infection: systematic review and critical appraisal. In BMJ 2020;369:m1328. Disponível em < https://www.bmj.com/content/bmj/suppl/2020/04/07/bmj.m1328.DC1/bmj.m1328.pdf >
 
 ## SOBRE NÓS
 * [Erick Grabowski Crisóstomo](https://github.com/dudegrabow), Data Scientist
