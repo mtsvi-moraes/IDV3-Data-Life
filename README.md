@@ -62,7 +62,7 @@ Para a decisão de variável de controle, consideramos o teste igM (teste da Imu
 
 Variáveis escolhidas:
 
-1. Identificação (1)
+1. Identificação (2)
   - age_category
   - sex
 
@@ -128,7 +128,7 @@ A categoria da base de treino do modelo ou amplamente chamado como features tamb
 ![AutoAI](/gifs/autoai.gif)
 
 
-## DESIGN DE TESTES
+## DESIGN DE TESTES E RESULTADOS
 
 Para a definição de nossos parâmetros para uma melhor estimação, definimos que o melhor resultado gerado seria aqueles que levam em consideração o balanceamento dos dados, o peso deles e o threshold. Para a percepção de resultados, levamos em consideração os seguintes itens:
 
@@ -138,7 +138,28 @@ Para a definição de nossos parâmetros para uma melhor estimação, definimos 
 -Especificidade
 -Acurácia
 
+-![Resultados](/gifs/rf.png)
 
+Na tabela acima vemos três critérios diferentes para a classificação de performance do modelo Santos et al (2019) define que a sensibilidade é a proporção de verdadeiros positivos (VP) entre todos os indivíduos cuja resposta de interesse foi observada, e a especificidade refere-se à proporção de verdadeiros negativos (VN) entre aqueles com resposta de interesse ausente, a acurácia indica uma performance geral do modelo.
+Consideramos que modelo de classificação que mais se adequa aos nossos parâmetros de qualidade é a que utiliza o método de Regressão Logística, pois explorando os resultados de Sensibilidade, Especificação e Acurácia, a especificação e acurácia por possuírem valores muito próximos nos três modelos, a regressão logística se destacou no item de sensibilidade, isso quer dizer, que dentro do modelo, o número de acertos na previsão de pessoas que possuíam dentro do banco de dados o reagente positivo para igM foram de quarenta e quatro por cento, seguido posteriormente e com resultado bem próximo pelo modelo de Random Forest, com um resultado de quarenta e dois por cento, o modelo de Árvore de Decisão equiparados aos dois modelos citados anteriormente apresentou um pior resultado, de trinta e oito por cento.
+Também no nosso critério de escolha, observamos os resultados obtidos através da geração da Curva ROC, que irá nos dizer um comparativo de sensibilidade do desempenho dos modelos que melhor performaram, obtendo o seguinte resultado.
+
+-![ROC](/gifs/roc2.png)
+
+Na imagem acima, com a observação apenas da curva, não é conclusivo afirmar qual a melhor performance obtida, porém, ao analisarmos a área que elas possuem, veremos que o resultado da regressão logística possui uma leve vantagem comparado aos demais modelos, cravando assim nosso critério de escolha.
+Na tabela a seguir, observamos a influência das variáveis respostas no modelo LOGIT:
+
+-![LOGIT](/gifs/filogit.png)
+
+-![LOGIT](/gifs/fi2.png)
+
+Apesar de uma pior performance pouco perceptiva no critério de sensibilidade, o modelo performado no método Random Forest também apresentou resultados satisfatórios na importância das variáveis no modelo, podemos observar na tabela e na imagem a seguir respectivamente:
+
+-![LOGIT](/gifs/firf.png)
+
+-![LOGIT](/gifs/fi1.png)
+
+Com resultados divergentes entre algumas posições de importância de variável, podemos observar o destaque de uma em especial, a categoria de idade, esta variável nos mostra como a idade da população observada está sendo determinante para a predição dos diferentes métodos empregados, no modelo LOGIT apresentando uma resposta de 21,75 e no modelo de Random Forest com uma resposta de 44,06%. A variável sex também se mostrou relevante, com os dois modelos apresentando um viés de gênero. Com um comparativo entre os dois métodos empregados, apesar de serem bastantes heterogêneos e divergentes, abrem oportunidades para uma discussão mais profunda sobre o assunto.
 
 ## BIBLIOGRAFIA
 
@@ -146,6 +167,12 @@ Para a definição de nossos parâmetros para uma melhor estimação, definimos 
 - [Watson Studio](https://www.ibm.com/cloud/watson-studio)
 - [Watson Machine Learning](https://www.ibm.com/br-pt/cloud/machine-learning)
 - [Watson IoT Cloud](https://www.ibm.com/cloud/internet-of-things)
+- NUNES, N. L.; KLUCK. M. M.; FACHEL. G. J;  Comparação de métodos de imputação única e múltipla usando como exemplo um modelo de risco para mortalidade cirúrgica. In: Rev. bras. epidemiologia, 2010. Disponível em: < https://www.scielo.br/j/rbepid/a/ZRCFBZDGfKC3RqTkRpbXWsF/?lang=pt >
+- F.E. HARREL JR. REGRESSION MODELING STRATEGIES In: BIOS 330. 2014. Disponível em < https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.468.8845&rep=rep1&type=pdf >
+https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html
+- SANTOS, G. H; NASCIMENTO, F. C; IZBICKI, R; DUARTE, O. Y; FILHO, C. A. Machine learning para análises preditivas em saúde: exemplo de aplicação para predizer óbito em idosos de São Paulo, Brasil In Cad. Saúde Pública 35 (7)  2019. Disponível em < https://www.scielo.br/j/csp/a/jyhKL6G4dZhcbchMD6bcS8s/ >
+- ESTEVES,  S.  R.;LORENA,  A.  C.;  NASCIMENTO, M.  Z.  Aplicação  de  técnicas  Aprendizado  de Máquina     na     Classificação     de     Imagens Mamográficas. In:  SIMPÓSIO  DE  INICIAÇÃO CIENTÍFICA  DA  UNIVERSIDADE  FEDERAL  DO ABC,2. 2009. Disponível em: <http://ic.ufabc.edu.br/II_SIC_UFABC/resumos/paper_5_150.pdf>
+- DUBEY. R. ; ZHOU. J. ; WANG. Y. ; THOMPSON. M. P. ; YE. J. ANALYSIS OF SAMPLING TECHNIQUES FOR IMBALANCED DATA: AN N=648 ADNI STUDY. In: Neuroimage. 220–241 (2014). Disponível em <   .https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946903/ >
 
 ## SOBRE NÓS
 * [Erick Grabowski Crisóstomo](https://github.com/dudegrabow), Data Scientist
