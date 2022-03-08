@@ -6,7 +6,7 @@
 1. [INTRODUÇÃO](#INTRODUÇÃO)
 2. [MATERIAIS E METODOS](#MATERIAIS-E-METODOS)
 3. [FONTES DE DADOS](#FONTES-DE-DADOS)
-5. [ESTATISTICA DISCRITIVA](#ESTATISTICA-DISCRITIVA)
+5. [ESTATISTICA DESCRITIVA](#ESTATISTICA-DISCRITIVA)
 6. [PREPARAÇÃO DOS DADOS](#PREPARAÇÃO-DOS-DADOS)
 7. [TÉCNICAS DE MODELAGEM](TÉCNICAS-DE-MODELAGEM)
 8. [DESIGN DE TESTES](#DESIGN-DE-TESTES)
@@ -56,7 +56,7 @@ Para a seleção preliminar de variáveis, fora decidido seis etapas para a dete
 - Fora do escopo do projeto ou não aplicável
 - Observações fora do estado de São Paulo
 
-  A entrevista ocorrida no dia 31/08/2021 com as epidemiologistas Elaine Cristina Marqueze e Claudia Renata dos Santos Barros ligadas ao Instituto Butantan foi deveras esclarecedora acerca de diversas variáveis da base de dados disponibilizada, assim permitindo um melhor entendimento e a decisão de permanências de cinquenta variáveis, sendo estas escolhidas pelo baixo índice de informação faltante, a congregação de colunas com informações duplicadas e a alta relevância acerca do entendimento da doença através da entrevista realizada.
+  A entrevista ocorrida no dia 31/08/2021 com as epidemiologistas Elaine Cristina Marqueze e Claudia Renata dos Santos Barros ligadas ao Instituto Butantan foi deveras esclarecedora acerca de diversas variáveis da base de dados disponibilizada, assim permitindo um melhor entendimento e a decisão de permanências de trinta e cinco variáveis, sendo estas escolhidas pelo baixo índice de informação faltante, a congregação de colunas com informações duplicadas e a alta relevância acerca do entendimento da doença através da entrevista realizada.
 A decisão de não incluir observações que ocorreram fora do estado de São Paulo foi tomada por conta do alto número de informações faltantes de testes realizados fora do mesmo e também por se tratar de um estudo de caso epidemiológico, onde fatores regionais distintos podem ocasionar em uma falsa interpretação do modelo.
 Para a decisão de variável de controle, consideramos o teste igM (teste da Imunoglobulina M), pois ele representa uma infecção recente daqueles afetados da COVID-19, assim, dentro do escopo sugerido, é a variável que mais interessante se torna para a determinação se o indivíduo está ou não infectado, conforme Prazuck (2020), em testes rápidos pertencentes às empresas COVID-PRESTO® e COVID-DUO®  a presença do anticorpo igM é prevalecente até o décimo e quinto dia de infecção.
 
@@ -112,21 +112,36 @@ Com o alto número de valores faltantes entre todos os cinco data sets, a soluç
 
 A categoria da base de treino do modelo ou amplamente chamado como features também é transformado utilizando-se uma técnica de StandardScaler, na pacote da linguagem do python fornecido pela biblioteca SKlearn, segundo a informação da biblioteca, é necessário o uso desta transformação pois a uniformização do data set é um requerimento comum para diversos modelos de machine learning, estes modelos podem performar de maneira esdrúxula se as features não parecerem nem mais nem menos de uma uniformização de distribuição normal.
 
+## ESTATATÍCA DESCRITIVA
+Através de uma análise feita no R através do pacote, podemos visualizar alguns insights sobre o projeto.
+
+-![Coleta](/gifs/coletadedados.png)
+
+-![Positivospormes](/gifs/posipormes.png)
+
+Com a visualização das imagens acima, podemos notar uma diferença nos últimos meses entre a coleta e os positivos, e também nos meses após o pico de positivos, onde a coleta se manteu constante mas o número de positivos cai abruptamente.
+
+Apesar de uma constante presença de assintomáticos tanto no quadro geral como nos casos positivos há uma queda quando olhamos para o último caso. Os sintomas parecem apresentar constância durante todo o período, exceto nas extremidades dos períodos de teste. 
+Nos primeiros meses o sintoma mais aparente era dor de cabeça (05-09/2020), seguido depois por dor no corpo (10/2020 – 02/2021) e por último tosse (03-08/2021).
+
+-![SintomaGeral](/gifs/sintomasgeral.png)
+
+-![SintomaPosi](/gifs/sintomaspositivos.png)
+
+-![SintomaNega](/gifs/sintomasnegativos.png)
+
+A frequência de casos positivos varia de 11 a 3% em cidades com mais de 10.000 testes realizados, totalizando 33 municípios dos 241 existentes.
+
+-![Municipio](/gifs/municipio.png)
 
 ## TÉCNICAS DE MODELAGEM
 
-1. Fase inicial: A partir da biblioteca Pandas do Python, foram utilizados o método drop para remover todas as colunas que foram identificadas como não potenciais
-2. Após a deleção de tais colunas, através do método isnull do pandas foram identificadas as colunas que não possuíam valores NaN (Valores nulos)
-3. Após a identificação dos valores NaN, foram pensadas alternativas para o preenchimento desses valores. Em colunas que possuíam a grande maioria das linhas com valores NaN, elas foram removidas, uma vez que em tal condição, onde por exemplo, 99% dos valores são nulos, não é possível fazer uma estimação desses valores.
-4. Após a identifcação de tais valores, em colunas onde era possível, através da biblioteca Scikit-learn, foi utilizado o método IterativeImputer para estimar valores nulos.
-5. Concluindo esse ponto, foram dividos os treinos entre treino e teste e escolhido o modelo de predição, que incluem Random Forest, Logit e Softmax
-6. Após isso, para melhorar o desempenho do nosso modelo, foi utilizado o modulo GridSearchCV da biblioteca Scikit-learn para otimização de hiperparametros do modelo de Machine Learning
-7. Após a otimização dos hiperparâmetros, mais uma vez foi rodado o modelo com os melhores parametros e uma melhor otimização
-8. Para concluir, foram mostrado métodos de avaliação de modelo como Matriz de confusão, curva ROC, e classification report
-9. Para mais uma vez validar nossos estudos, foi utilizada a plataforma Watson da IBM com o AutoAI
+O uso de modelos de machine learning na medicina não é novidade na área de patologias, para a predição do nosso modelo é se faz necessário o uso de modelos classificatórios, conforme ESTEVES et al., (2009) o machine learning (ML)  é uma  subárea  da Inteligência Artificial (IA), que estuda o desenvolvimento  de  métodos capazes de extrair informações e conhecimento a partir de amostras de dados. São utilizados uma vasta gama de algoritmos diferentes com a capacidade de classificar conjuntos de elementos. Por classificação entende-se o processo de atribuir a um determinado  dado, o  rótulo  da  classe  à qual ele pertence. Neste  sentido as técnicas de ML são empregadas na  indução,  a  partir  de um conjunto de exemplos de um classificador, que deve ser capaz  de  prever  a classe  de novos  dados  quaisquer  do  domínio em que ele foi treinado   
 
-![AutoAI](/gifs/autoai.gif)
+Nesta pesquisa, utilizou-se três técnicas de machine learning, o random forest, um método classificatório que consiste na criação de árvores de decisão com baixa correlação e previsão por voto, a regressão logística, algoritmo baseado entre a relação entre a variável dependente categórica com as variáveis independentes, estimando as probabilidades usando uma função logística e árvore de decisão, um método onde existe uma função que recebe um vetor de valores (de atributos) como entrada e retorna uma decisão (de saída).
+Uns dos grandes desafios se direcionou ao tratamentos de balanceamento da base de dados, neste trabalho, optou-se em observar o resultados dos três modelos de machine learning em quatro métodos de desbalanceamentos, sendo eles, oversample, smote (Synthetic Minority Over-sampling Technique), undersampler e near miss, vale lembrar que smote e near miss também são classificados como oversampler e undersampler, respectivamente.
 
+Dubey et., al (2014) comenta que no oversampler, todos os pontos de dados dos conjuntos de treinamento majoritários e minoritários são usados. Além disso, as instâncias são escolhidas aleatoriamente, com reposição do conjunto de treinamento minoritário até que o equilíbrio desejado seja alcançado. Adicionar as mesmas amostras minoritárias pode resultar em overfitting, reduzindo assim a capacidade de generalização do classificador, no balanceamento SMOTE, o classificador irá considerar as mesmas informações já citadas, mas com o adicional de dados minoritários sintéticos. No caso do undersampler, o autor comenta que todos os pontos de dados de treinamento da classe minoritária são usados. As instâncias são removidas aleatoriamente do conjunto de treinamento majoritário até que o equilíbrio desejado seja alcançado. Uma desvantagem dessa abordagem é que algumas informações úteis podem ser perdidas da classe majoritária devido à subamostragem.
 
 ## DESIGN DE TESTES E RESULTADOS
 
@@ -173,6 +188,7 @@ https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Standard
 - SANTOS, G. H; NASCIMENTO, F. C; IZBICKI, R; DUARTE, O. Y; FILHO, C. A. Machine learning para análises preditivas em saúde: exemplo de aplicação para predizer óbito em idosos de São Paulo, Brasil In Cad. Saúde Pública 35 (7)  2019. Disponível em < https://www.scielo.br/j/csp/a/jyhKL6G4dZhcbchMD6bcS8s/ >
 - ESTEVES,  S.  R.;LORENA,  A.  C.;  NASCIMENTO, M.  Z.  Aplicação  de  técnicas  Aprendizado  de Máquina     na     Classificação     de     Imagens Mamográficas. In:  SIMPÓSIO  DE  INICIAÇÃO CIENTÍFICA  DA  UNIVERSIDADE  FEDERAL  DO ABC,2. 2009. Disponível em: <http://ic.ufabc.edu.br/II_SIC_UFABC/resumos/paper_5_150.pdf>
 - DUBEY. R. ; ZHOU. J. ; WANG. Y. ; THOMPSON. M. P. ; YE. J. ANALYSIS OF SAMPLING TECHNIQUES FOR IMBALANCED DATA: AN N=648 ADNI STUDY. In: Neuroimage. 220–241 (2014). Disponível em <   .https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3946903/ >
+- PRAZUCK. T. ; COLIN. M. ;GIACHE. S. al. ; Evaluation of performance of two SARS-CoV-2 Rapid IgM-IgG combined antibody tests on capillary whole blood samples from the fingertip. In PLoS One (9):e0237694 (2020 September) Disponível em < https://pubmed.ncbi.nlm.nih.gov/32941461/ >
 
 ## SOBRE NÓS
 * [Erick Grabowski Crisóstomo](https://github.com/dudegrabow), Data Scientist
@@ -187,5 +203,5 @@ https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Standard
 
 ## License
 
-This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under Instituto Butantans.
 
