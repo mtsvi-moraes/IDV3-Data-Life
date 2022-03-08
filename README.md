@@ -62,49 +62,24 @@ Para a decisão de variável de controle, consideramos o teste igM (teste da Imu
 
 Variáveis escolhidas:
 
-1. Identificação (2)
+1. Variáveis escolhidas:
   - age_category
   - sex
-
-2. Condição (18)
-  - puerperal
-  - hematological_disease
-  - neurologicas_disease
-  - tumor
-  - autoimmune_diseases
-  - other_comorbidity
-  - pregnancy
-  - disability
-  - obesity
-  - has_vaccine_flu
-  - kidneys_disease
-  - liver_disease
-  - asthma
-  - smoker
-  - diabetes
-  - lung_disease
-  - heart_disease
-  - high_pressure
-
-3. Sintomas (15)
-  - conjunctivitis
-  - asymptomatic
-  - abdomen_pain
-  - chills
+  - cough
+  - running_nose
+  - head_pain
   - diarrhea
   - missing_smell
-  - missing_tasy
-  - nausea
-  - body_pain
-  - cough
-  - fever
-  - hard_breathe
-  - head_pain
-  - running_nose
   - throat_pain
-   
-5. Resultado (1)
-  - result_igm
+  - hard_breathe
+  - body_pain
+  - nauseas
+  - chills
+  - missing-tasty
+  - fever
+  - abdomen-pain
+  - conjuctivitis
+  - asymptomatic
 
 Em relação aos dados descartados com base nos parâmetros já esclarecidos anteriormente, apesar de terem sido descartados por não se adequarem ao modelo aqui proposto, podem apresentar uma alta relevância em estudos futuros a fundo.
 
