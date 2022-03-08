@@ -17,40 +17,24 @@
 
 ## INTRODUÇÃO:
 
-<p>Over 1.8 billion people on Earth do not have access to adequate sanitation. Therefore, over 10 million people, with the majority being children, die every year due to the lack of safe drinking water. This is a major problem plaguing humanity, targeting the poorest populations, whose only source of drinking water are rivers that can become polluted unbeknownst to the people who rely on them.
-
-Today, while scientific advancements are made daily, analyzing water quality is not a simple task. Researchers must travel to the region and collect individual samples. After which, the samples must then be  transported to a qualified laboratory where testing can be performed. Each of these crucial steps increase the time and monetary value spent on the expedition making it more difficult to receive funding and consequently alert the population.
-Taking all of this into account, we developed SpecWater, a solution that aims to facilitate this process and improve access to safer water sources in all regions and in real time, for all humanity.
-
-SpecWater uses Artificial Intelligence that analyzes the spectrum of light within a water sample collected by an IoT (a small equipment installed in rivers and lakes). After the analysis, results will be made available on an easily accessible website. Expanded functions such as the ability to trigger an alert via SMS, will also be available. When a water quality alert is sent, it will allow the population to be able to check the quality of the community source and view whether it has been contaminated, or if it’s safe to consume. Instructions regarding a separate source of drinking water will be provided if the community source tests confirm contamination thus, avoiding infant mortality, the human immunodeficiency virus, which is often found in contaminated water and several other serious health and nutrition problems. The responsible authorities will also be immediately alerted to take action and provide further assistance to the local population.</p>
+<p>A pandemia que teve início em 2019 (COVID-19) causada pelo novo coronavírus SARS-CoV-2 trouxe a realidade do preparo de diversos setores na prevenção contra esse tipo de evento e continua sendo um desafio para os sistemas de saúde. O diagnóstico imediato e efetivo da doença é um fator chave para as decisões clínicas e para compreensão do processo de infecção, fornecendo embasamento para decisões quanto a políticas públicas, por exemplo.
+O teste mais utilizado para o COVID-19 utiliza transcrição reversa seguida de reação em cadeia da polimerase em tempo real (RT-PCR). No entanto, estes testes costumam ser mais caros e demorados. Além disso, a falta de disponibilidade no início da pandemia e atraso nos resultados resultou na opção por testes mais rápidos. Testes sorológicos, por sua vez, são baseados na comprovação da presença de anticorpos no sangue, e, apesar de apresentarem uma menor sensibilidade são de baixo custo, mais acessíveis e rápidos. Todas as metodologias apresentam características diferentes e geralmente o diagnóstico depende não somente do exame, mas do histórico clínico e probabilidade de risco. A falta de diagnóstico correto pode acarretar um tratamento médico equivocado e uma fragmentação da informação sobre o avanço da pandemia.
+O Instituto Butantan, uma instituição renomada em pesquisa e principal produtor de imunobiológicos do Brasil, em parceria com o governo do estado de São Paulo realizou diversas ações de testagem populacional para detecção do COVID-19, principalmente em populações em casos de vulnerabilidade utilizando testes sorológicos. Mediante as testagens foi realizado um inquérito epidemiológico para coletar informações sintomáticas, sociais, econômicas e condições de saúde dos indivíduos. Além do monitoramento da doença, o objetivo foi compreender o processo de infecção e fatores importantes de diagnóstico. 
+Apesar de diversos estudos, ainda é desconhecido fatores chaves da infecção e indicadores, mesmo quando tratamos sobre sintomas e a interação entre estes.  Os sintomas mais citados na literatura como indicadores de infecção por COVID-19 foram dor de cabeça, febre, tosse, diarreia, hiposmia e anosmia. O uso de modelos de previsão pode ser uma estratégia chave especialmente em um contexto de recursos limitados que se utiliza da combinação de fatores para estimar a probabilidade de um indivíduo estar infectado e vai ao encontro da demanda social para entendimento de doenças e riscos de propagação e evolução de possíveis futuros eventos. </p>
 
 
 ### MATERIAIS E METODOS
 
-According to a recent report made by the United Nations Children’s Emergency Fund (UNICEF) and the World Health Organization (WHO), one in three people worldwide does not have access to safe water. 
-In many countries, taps, wells and pipes which are the only option for drinking water are contaminated unbeknownst by the population, putting the health of the ones who drink it at risk and making many sick.
+Os recursos necessários para o desenvolvimento do projeto foi uma equipe totalmente dedicada ao projeto composta pelo product owner, scrum master e três desenvolvedores. Uma equipe parcialmente dedicada ao projeto composta por consultor funcional e um consultor técnico. Foram necessários equipamentos como notebooks, ambientes de desenvolvimento e repositórios.
 
 ### FONTES DE DADOS:
 
-Every person needs a sustainable supply of clean water: for drinking, washing, cooking and cleaning. It is a basic human right and there are still millions of people who do not have clean water.
-
-To date, governments, institutions and service providers around the world have not done enough to ensure that clean water reaches the poorest and most marginalized people.
-
-Although COVID-19 highlights the importance of hand hygiene in preventing the spread of disease, billions of people around the world, including hundreds of millions of school-age children, do not have access to soapy washbasins. People living in rural areas, urban slums, disaster prone areas and low-income countries are the most vulnerable and the most affected. In addition, children who do not have clean water have not only their health affected, but also their nutrition, education and learning skills, impacting many aspects of their lives.
-
-Given this, we have the sad realization that millions of people suffer annually, without water, sanitation and hygiene services.
-
-### ESTATISTICA DISCRITIVA:
-
-Once the Desk Research step is completed, we realize that the starting point is to create a solution that aims to facilitate the process of water analysis and make the quality in your region available to all humanity in real time, so that everyone can access the site whenever you want, alerts will also be issued when the water that supplies your region is contaminated, as well as instructions for another form of drinking water consumption, and allowing safe information to be shared.
-
-In addition, the system will issue an alert for responsible authorities to take appropriate action.
-
+A base de dados utilizada neste estudo é categorizada como dados em painel com periodicidade diária contemplando observações não-únicas, com disponibilização de cento e uma variáveis. Ela foi disponibilizada através do Instituto Butantan, e se provém dos inquéritos epidemiológicos coletados em todo o Brasil, mas com maior ênfase no estado de São Paulo.
 
 ## PREPARAÇÃO DOS DADOS
 
   Dos dados recebidos do Butantã, a partir de um arquivo csv com aproximadamente 1.3 milhões de dados descritivos e mais de 100 colunas, foram identificadas colunas potenciais, que incluíam sintomas e condições sociais relativas a pacientes com covid-19 com o objetivo de identificar potenciais casos da doença. 
-A partir de conversas com o cliente, o total de 100 colunas foram resumidas para um total de 51 colunas que mais representavam a doença, bem como representava as colunas que eram utilizadas, uma vez que outrora muitas colunas foram descartadas a longo do tempo, ou então não foram respondidas pelo paciente.
+A partir de conversas com o cliente, o total de 100 colunas foram resumidas para um total de 35 colunas que mais representavam a doença, bem como representava as colunas que eram utilizadas, uma vez que outrora muitas colunas foram descartadas a longo do tempo, ou então não foram respondidas pelo paciente.
 
 * SELEÇÃO DE VARIÁVEIS
 
@@ -80,6 +64,7 @@ Variáveis escolhidas:
 
 1. Identificação (1)
   - age_category
+  - sex
 
 2. Condição (18)
   - puerperal
@@ -117,105 +102,17 @@ Variáveis escolhidas:
   - head_pain
   - running_nose
   - throat_pain
- 
- 4. Social (11)
-  - department
-  - test_worker
-  - healthcare_professional
-  - home_rooms
-  - has_running_water
-  - public_transport
-  - has_traveled
-  - presential_work
-  - has_contact_hospital
-  - has_contact_confirmed
-  - has_contact_suspicious
-
-  
+   
 5. Resultado (1)
   - result_igm
 
-Em uma exploração aos dados descartados com base nos parâmetros já esclarecidos anteriormente, apesar de terem sido descartados por não se adequarem ao modelo aqui proposto, podem apresentar uma alta relevância em estudos futuros a fundo.
+Em relação aos dados descartados com base nos parâmetros já esclarecidos anteriormente, apesar de terem sido descartados por não se adequarem ao modelo aqui proposto, podem apresentar uma alta relevância em estudos futuros a fundo.
 
-Variáveis descartadas:
+Com o alto número de valores faltantes entre todos os cinco data sets, a solução para tornar esta base de dados aplicável para uma solução utilizando-se ferramentas de machine learning foi a imputação múltipla através da linguagem R, segundo Nunes et al (2010) uma vantagem da imputação múltipla em relação à imputação única é o fato de a imputação múltipla levar em conta a variabilidade entre imputações e, no caso do método BLR, por ter o componente Bayesiano embutido no procedimento, restringir a subestimação da variabilidade amostral, já que a cada vez (e são m vezes) que é ajustada a regressão da IM, um valor diferente é gerado. Segundo F. E. Harrel Jr. (2001), quando há mais de 15% de dados faltantes, na maior parte dos modelos é indicada a imputação múltipla. Portanto, como neste trabalho havia uma média de 20% ~ 60% de dados faltantes para algumas categorias dos data sets, justifica-se a aplicação da imputação múltipla.
 
-1. Condição (15)
-  - Alto números de valores nulos
-    - chest_tomography
-    - pregnancy_trimester
-    - x_ray_result
-    - chronic_disease
-    - had_dengue_confirmed
-    - high_colesterol
-  - Amplitude de informações
-    - x_ray
-    - had_baby
-    - interned
-    - previous_disease_assessment_symptomatic
-    - had_dengue
-  - Informações duplicadas ou já incluída
-    - has_comobidity
-    - comorbities_number
-  - Fora do escopo da proposta
-    - blood_type
-   
-2. Sintomas (4)
-  - Alto números de valores nulos
-    - weakness
-    - fatigue
-  - Fora do escopo da proposta
-    - purple_marks
-    - red_marks
-3. Identificação (16)
-  - Alto números de valores nulos
-    - purpose_of_exam
-    - latitude
-    - longitude
-  - Informações duplicadas ou já incluídas
-    - pandemic_week_year
-    - date_hour_exam
-    - last_exam_by_document
-    - insert_date
-    - pandemic_week
-    - year
-  - Fora do escopo da proposta
-    - city
-    - last_exam_by_group
-    - project
-    - state
-    - municipio
-    - id_patient
-    - date_exam
-4. Resultado (7)
-  - Alto números de valores nulos
-    - previous_pcr_result
-    - previous_quick_test_result
-  - Amplitude
-    - previous_covid_exam
-  - Informações duplicadas ou já incluídas
-    - soro_reagent_desc
-    - soro_reagent
-  - Fora do escopo do projeto
-    - result_igg
-    
-5. Socioambiental (15)
-  - Alto números de valores nulos
-    - home_people
-    - risk_occupation
-    - work_people
-    - butantan
-    - family_income
-    - formal_job
-  - Amplitude
-    - live_with_another_people
-    - work_masks
-    - work_windows
-    - wear_mask
-    - work_airy_environment
-  - Fora do escopo da proposta
-    - work_people_bin
-    - work_city
- 
+A categoria da base de treino do modelo ou amplamente chamado como features também é transformado utilizando-se uma técnica de StandardScaler, na pacote da linguagem do python fornecido pela biblioteca SKlearn, segundo a informação da biblioteca, é necessário o uso desta transformação pois a uniformização do data set é um requerimento comum para diversos modelos de machine learning, estes modelos podem performar de maneira esdrúxula se as features não parecerem nem mais nem menos de uma uniformização de distribuição normal.
+
+
 ## TÉCNICAS DE MODELAGEM
 
 1. Fase inicial: A partir da biblioteca Pandas do Python, foram utilizados o método drop para remover todas as colunas que foram identificadas como não potenciais
@@ -233,46 +130,14 @@ Variáveis descartadas:
 
 ## DESIGN DE TESTES
 
-### Spectrophotometry research:
-It is a method used to measure how much a chemical substance absorbs light by measuring the intensity of when a beam of light passes through a sample, making it possible to measure the quantity of a known chemical substance
+Para a definição de nossos parâmetros para uma melhor estimação, definimos que o melhor resultado gerado seria aqueles que levam em consideração o balanceamento dos dados, o peso deles e o threshold. Para a percepção de resultados, levamos em consideração os seguintes itens:
 
+-Curva ROC
+-Matriz de Confusão
+-Sensibilidade
+-Especificidade
+-Acurácia
 
-
-### Arduino prototype:
-We developed a spectrophotometry prototype in Arduino capable of analyzing water samples, which when in the future installed in rivers, streams, wells, springs and treatment plants will collect the water data and process them through cloud.
-
-
-
-### Collection in the river:
-The Tietê river, born in Salesópolis, in the Serra do Mar, crosses the state of São Paulo, bathing 62 municipalities. The river is at the top of the ranking of the most polluted rivers in Brazil, as it receives domestic and industrial sewage in the stretch of the capital where less than half of this sewage is treated. The analyzed sample was collected in the western region of the city, after the river had crossed the entire state capital on the border with the municipality of Osasco.
-
-
-
-### Creation of an Arduino collector for spectrophotometry testing:
-Taken from the point where the water runs calmly with a strong sewage odor using a plastic container and transferred to the test body applying the method of analysis according to the variation of the light beam through the substance without decanting of organic material.
-
-
-
-### Data analysis
-For this project, two samples were collected for analysis, one from safe water and the other from the most polluted river in Brazil, the Tietê river, located in the capital of São Paulo. Thus, we carried out a comparison between different samples and proved the efficiency of the chosen method, proving that the project is functionally applicable:
-
-
-
-### Model algorithms, Auto AI 
-We used a cognitive system applied in Watson Studio together with Watson ML to test different algorithms and compare the efficiency of the models, streamlining the analysis process between the collected samples, and in the future analyzing any changes or anomalies that will be immediately noticed in the rivers.:
-
-
-
-
-### Web site 
-The SpecWater website is available for desktops and mobile devices. It is possible to search the water quality by filtering the country or province where the user is located, as well as view the map where the IoT device was installed and the water sample was collected, and through a check mark, view the quality of the water and in the future receive instructions on how to treat it for consumption, until the responsible authorities take further actions.
-
-You can check more details at: http://specwater.web.app
-
-
-
-
-#### Consequently creating a complete monitoring system through which we can observe changes in the physical, chemical and biological characteristics of the observed water
 
 
 ## BIBLIOGRAFIA
